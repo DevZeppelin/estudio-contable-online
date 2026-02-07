@@ -7,8 +7,27 @@ const places = [
   "Las Heras",
   "Luján de Cuyo",
   "Maipú",
+  "San Martín",
+  "Junín",
+  "Rivadavia",
+  "La Paz",
+  "Santa Rosa",
   "San Rafael",
+  "General Alvear",
+  "Malargüe",
+  "Tunuyán",
+  "Tupungato",
+  "San Carlos",
   "Valle de Uco",
+  "Cacheuta",
+  "Potrerillos",
+  "Uspallata",
+  "Chacras de Coria",
+  "Vistalba",
+  "Agrelo",
+  "Palmira",
+  "Bowen",
+  "Real del Padre",
   "y toda la provincia",
 ];
 
@@ -25,7 +44,7 @@ export default function Locations() {
           {places.map((p) => (
             <span
               key={p}
-              className="rounded-full border border-celeste  px-3 py-1 text-sm text-azul"
+              className="rounded-full border border-celeste  px-3 py-1 text-base text-azul"
             >
               {p}
             </span>

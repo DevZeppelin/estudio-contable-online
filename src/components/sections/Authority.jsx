@@ -22,16 +22,16 @@ export default function Authority() {
           </div>
 
           <aside className="rounded-3xl border border-celeste  p-6 shadow-soft">
-            <p className="text-sm font-semibold text-azul">Confianza</p>
-            <ul className="mt-4 grid gap-2 text-sm text-text">
-              <li>• Reunión de 15 minutos</li>
+            <p className="text-base font-semibold text-azul">Confianza</p>
+            <ul className="mt-4 grid gap-2 text-base text-text">
+              <li>• Reunión de 20 minutos</li>
               <li>• Plan de acción claro</li>
               <li>• Confidencialidad</li>
               <li>• Atención Mendoza (provincia)</li>
             </ul>
             <a
               href="#reservar"
-              className="mt-6 btn inline-flex w-full items-center justify-center rounded-xl  px-5 py-3 text-sm font-semibold text-bg shadow-soft hover:opacity-95"
+              className="mt-6 btn inline-flex w-full items-center justify-center rounded-xl  px-5 py-3 text-base font-semibold text-bg shadow-soft hover:opacity-95"
             >
               Reservar turno
             </a>

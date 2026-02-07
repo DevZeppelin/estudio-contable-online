@@ -30,8 +30,10 @@ export default function Testimonials() {
               key={i}
               className="rounded-2xl border border-celeste  p-6 shadow-soft"
             >
-              <blockquote className="text-sm text-text">“{t.quote}”</blockquote>
-              <figcaption className="mt-4 text-sm font-semibold text-azul">
+              <blockquote className="text-base text-text">
+                “{t.quote}”
+              </blockquote>
+              <figcaption className="mt-4 text-base font-semibold text-azul">
                 {t.author}
               </figcaption>
             </figure>

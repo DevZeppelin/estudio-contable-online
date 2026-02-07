@@ -13,7 +13,7 @@ export default function MicroCTAs() {
             href="https://wa.me/5492615740182"
             target="_blank"
             rel="noreferrer"
-            className="rounded-2xl  px-6 py-5 text-center text-sm font-semibold text-bg shadow-soft hover:opacity-95"
+            className="rounded-2xl  px-6 py-5 text-center text-base font-semibold text-bg shadow-soft hover:opacity-95"
           >
             🟢 Hablar por WhatsApp ahora
           </a>
@@ -22,7 +22,7 @@ export default function MicroCTAs() {
             href="https://wa.me/5492615740182"
             target="_blank"
             rel="noreferrer"
-            className="rounded-2xl px-6 py-5 text-center text-sm font-semibold text-bg shadow-soft hover:opacity-95"
+            className="rounded-2xl px-6 py-5 text-center text-base font-semibold text-bg shadow-soft hover:opacity-95"
           >
             🟡 Solicitar presupuesto rápido
           </a>
@@ -30,7 +30,7 @@ export default function MicroCTAs() {
           <a
             href="https://calendly.com/contador-publico-matriculado-mendoza"
             target="_blank"
-            className="rounded-2xl  px-6 py-5 text-center text-sm font-semibold text-bg shadow-soft hover:opacity-95"
+            className="rounded-2xl  px-6 py-5 text-center text-base font-semibold text-bg shadow-soft hover:opacity-95"
           >
             🔵 Agendá una cita
           </a>

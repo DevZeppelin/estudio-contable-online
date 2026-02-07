@@ -29,7 +29,7 @@ export default function Differentials() {
               <span className="mt-0.5 inline-flex h-7 w-7 items-center justify-center rounded-xl  text-bg">
                 ✓
               </span>
-              <p className="text-sm text-text">{b}</p>
+              <p className="text-base text-text">{b}</p>
             </div>
           ))}
         </div>

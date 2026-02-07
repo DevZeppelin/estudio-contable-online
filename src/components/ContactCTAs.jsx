@@ -12,7 +12,7 @@ export default function ContactCTAs({
         <h3 className="text-xl font-extrabold tracking-tight text-[rgb(var(--azul))]">
           {title}
         </h3>
-        <p className="text-sm leading-relaxed text-[rgb(var(--muted))]">
+        <p className="text-base leading-relaxed text-[rgb(var(--muted))]">
           {subtitle}
         </p>
       </div>
@@ -29,7 +29,7 @@ export default function ContactCTAs({
           target="_blank"
           rel="noopener noreferrer"
           className={[
-            "inline-flex w-full items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold",
+            "inline-flex w-full items-center justify-center gap-2 rounded-xl px-5 py-3 text-base font-semibold",
             "bg-white/80 text-[rgb(var(--azul))] shadow-sm ring-1 ring-black/5 transition hover:bg-white",
             "focus:outline-none focus:ring-2 focus:ring-[rgb(var(--celeste)/0.35)] focus:ring-offset-2 focus:ring-offset-transparent",
             "sm:w-auto",
@@ -40,7 +40,7 @@ export default function ContactCTAs({
         </a>
       </div>
 
-      <p className="mt-4 text-xs text-[rgb(var(--muted))]">
+      <p className="mt-4 text-base text-[rgb(var(--muted))]">
         🔒 La información que brindes se utiliza solo para coordinar la reunión.
       </p>
     </div>

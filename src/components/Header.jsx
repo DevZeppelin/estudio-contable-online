@@ -14,10 +14,10 @@ export default function Header() {
       <Container className="flex h-16 items-center justify-between">
         <a href="#contenido" className="flex items-center gap-2">
           <div className="leading-tight">
-            <p className="text-sm font-semibold text-azul">
+            <p className="text-base font-semibold text-azul">
               Estudio Contable Mendoza
             </p>
-            <p className="text-xs text-muted">100% online</p>
+            <p className="text-base text-muted">100% online</p>
           </div>
         </a>
 
@@ -29,7 +29,7 @@ export default function Header() {
             <a
               key={item.href}
               href={item.href}
-              className="text-sm text-muted hover:text-azul"
+              className="text-base text-muted hover:text-azul"
             >
               {item.label}
             </a>
@@ -39,7 +39,7 @@ export default function Header() {
         <div className="flex items-center gap-3">
           <a
             href="#reservar"
-            className="btn inline-flex items-center justify-center rounded-xl  px-4 py-2 text-sm font-semibold text-bg shadow-soft hover:opacity-95"
+            className="btn inline-flex items-center justify-center rounded-xl  px-4 py-2 text-base font-semibold text-bg shadow-soft hover:opacity-95"
           >
             Reservar turno
           </a>

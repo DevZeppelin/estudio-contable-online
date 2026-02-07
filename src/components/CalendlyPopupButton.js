@@ -47,7 +47,7 @@ export default function CalendlyPopupButton({
             href={url}
             onClick={handleClick}
             className={[
-                "inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold",
+                "inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-base font-semibold",
                 "text-white shadow-lg transition hover:opacity-95",
                 "bg-[linear-gradient(135deg,rgb(var(--cian)),rgb(var(--celeste)))]",
                 loading ? "opacity-80 pointer-events-none" : "",

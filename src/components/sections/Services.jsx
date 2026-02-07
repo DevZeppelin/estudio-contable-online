@@ -43,13 +43,13 @@ export default function Services() {
               className="rounded-2xl border border-celeste  p-6 shadow-soft"
             >
               <h3 className="text-base font-semibold text-azul">{s.title}</h3>
-              <p className="mt-2 text-sm text-muted">{s.desc}</p>
+              <p className="mt-2 text-base text-muted">{s.desc}</p>
             </article>
           ))}
         </div>
 
         <div className="mt-8 rounded-2xl p-5">
-          <p className="text-sm font-semibold text-azul">
+          <p className="text-base font-semibold text-azul">
             📌 Todo el servicio es 100% ONLINE, Simple y Ordenado.
           </p>
         </div>

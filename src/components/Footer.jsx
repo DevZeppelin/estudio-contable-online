@@ -8,11 +8,11 @@ export default function Footer() {
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="font-semibold text-azul">{SITE.name}</p>
-            <p className="text-sm text-muted">
+            <p className="text-base text-muted">
               Atención profesional y confidencial
             </p>
           </div>
-          <div className="text-sm text-muted">
+          <div className="text-base text-muted">
             <p>{SITE.domain.replace("https://", "")}</p>
             <p>{SITE.brandPerson}</p>
             <p>© {new Date().getFullYear()} Todos los Derechos Reservados</p>

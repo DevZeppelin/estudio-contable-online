@@ -26,7 +26,7 @@ export default function Problems() {
               key={t}
               className="rounded-2xl border border-celeste  p-5 shadow-soft"
             >
-              <p className="text-sm text-text">{t}</p>
+              <p className="text-base text-text">{t}</p>
             </div>
           ))}
         </div>
@@ -34,7 +34,7 @@ export default function Problems() {
         <div className="mt-8">
           <a
             href="#reservar"
-            className="inline-flex btn items-center justify-center rounded-xl  px-5 py-3 text-sm font-semibold text-bg shadow-soft hover:opacity-95"
+            className="inline-flex btn items-center justify-center rounded-xl  px-5 py-3 text-base font-semibold text-bg shadow-soft hover:opacity-95"
           >
             Reservar reunión y resolverlo
           </a>

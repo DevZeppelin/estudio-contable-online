@@ -26,6 +26,10 @@
     ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
 }
 
+p {
+  font-size: large;
+}
+
 body {
   background:
     radial-gradient(

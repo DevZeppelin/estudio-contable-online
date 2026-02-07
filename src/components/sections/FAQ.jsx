@@ -5,7 +5,7 @@ const faqs = [
     q: "¿Cómo es la reunión?",
     a: "Es una reunión 100% ONLINE donde analizamos tu situación y te explicamos qué hacer.",
   },
-  { q: "¿Cuánto dura?", a: "15 minutos." },
+  { q: "¿Cuánto dura?", a: "20 minutos." },
   {
     q: "¿Tengo que llevar algo?",
     a: "Si tenés datos o claves, mejor. Si no, lo vemos en la reunión.",
@@ -24,19 +24,19 @@ export default function FAQ() {
           Preguntas frecuentes
         </h2>
 
-        <div className="mt-8 grid gap-3">
+        <div className="mt-8 grid gap-3 text-xl">
           {faqs.map((f) => (
             <details
               key={f.q}
-              className="group rounded-2xl border border-celeste  p-5 shadow-soft"
+              className="group rounded-2xl border border-celeste text-2xl p-5 shadow-soft"
             >
-              <summary className="cursor-pointer list-none text-sm font-semibold text-azul">
+              <summary className="cursor-pointer list-none text-base font-semibold text-azul">
                 {f.q}
                 <span className="float-right text-muted group-open:rotate-180">
                   ▾
                 </span>
               </summary>
-              <p className="mt-3 text-sm text-muted">{f.a}</p>
+              <p className="mt-3 text-base text-muted">{f.a}</p>
             </details>
           ))}
         </div>

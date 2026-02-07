@@ -19,7 +19,7 @@ export default function Hero() {
       <Container className="py-14 sm:py-20">
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <div>
-            <p className="inline-flex items-center gap-2 rounded-full border border-celeste bg-card px-3 py-1 text-xs font-semibold text-azul">
+            <p className="inline-flex items-center gap-2 rounded-full border border-celeste bg-card px-3 py-1 text-base font-semibold text-azul">
               <span className="h-2 w-2 rounded-full bg-cian" />
               100% ONLINE – Estudio Contable en Mendoza
             </p>
@@ -37,7 +37,7 @@ export default function Hero() {
 
             <ul className="mt-6 grid gap-2">
               {benefits.map((b) => (
-                <li key={b} className="flex items-start gap-2 text-sm">
+                <li key={b} className="flex items-start gap-2 text-base">
                   <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-md bg-pastel text-azul">
                     ✓
                   </span>
@@ -49,59 +49,59 @@ export default function Hero() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
                 href="#reservar"
-                className="inline-flex btn items-center justify-center rounded-xl bg-cian px-5 py-3 text-sm font-semibold text-bg shadow-soft hover:opacity-95"
+                className="inline-flex btn items-center justify-center rounded-xl bg-cian px-5 py-3 text-base font-semibold text-bg shadow-soft hover:opacity-95"
               >
                 🟢 Reservar turno ahora
               </a>
-              <p className="text-sm text-muted">
+              <p className="text-base text-muted">
                 👉 Elegí día y horario. La reunión es online.
               </p>
             </div>
 
-            <p className="mt-4 text-xs text-muted">
-              * Reunión de 15 minutos. Información confidencial.
+            <p className="mt-4 text-base text-muted">
+              * Reunión de 20 minutos. Información confidencial.
             </p>
           </div>
 
           <div className="rounded-3xl bg-white/70 backdrop-blur-md p-6 shadow-[0_12px_35px_rgba(15,23,42,0.10)]">
-            <p className="text-sm font-semibold tracking-wide text-[rgb(var(--azul))]">
+            <p className="text-base font-semibold tracking-wide text-[rgb(var(--azul))]">
               Reunión online · Proceso simple
             </p>
 
             <ol className="mt-5 space-y-3">
               <li className="flex items-start gap-4 rounded-2xl bg-white/80 p-4">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-[rgb(var(--pastel)/0.6)] text-sm font-bold text-[rgb(var(--azul))]">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-[rgb(var(--pastel)/0.6)] text-base font-bold text-[rgb(var(--azul))]">
                   1
                 </span>
-                <p className="text-sm text-[rgb(var(--text))]">
+                <p className="text-base text-[rgb(var(--text))]">
                   Reservás tu turno eligiendo día y horario
                 </p>
               </li>
 
               <li className="flex items-start gap-4 rounded-2xl bg-white/80 p-4">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-[rgb(var(--pastel)/0.6)] text-sm font-bold text-[rgb(var(--azul))]">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-[rgb(var(--pastel)/0.6)] text-base font-bold text-[rgb(var(--azul))]">
                   2
                 </span>
-                <p className="text-sm text-[rgb(var(--text))]">
+                <p className="text-base text-[rgb(var(--text))]">
                   Analizamos tu situación en una videollamada
                 </p>
               </li>
 
               <li className="flex items-start gap-4 rounded-2xl bg-white/80 p-4">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-[rgb(var(--pastel)/0.6)] text-sm font-bold text-[rgb(var(--azul))]">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-[rgb(var(--pastel)/0.6)] text-base font-bold text-[rgb(var(--azul))]">
                   3
                 </span>
-                <p className="text-sm text-[rgb(var(--text))]">
+                <p className="text-base text-[rgb(var(--text))]">
                   Te llevás un plan claro y accionable
                 </p>
               </li>
             </ol>
 
             <div className="mt-6 rounded-2xl bg-[rgb(var(--pastel)/0.45)] p-4">
-              <p className="text-xs font-semibold uppercase tracking-wide text-[rgb(var(--azul))]">
+              <p className="text-base font-semibold uppercase tracking-wide text-[rgb(var(--azul))]">
                 Ideal para
               </p>
-              <p className="mt-1 text-sm text-[rgb(var(--text))]">
+              <p className="mt-1 text-base text-[rgb(var(--text))]">
                 Monotributistas · Responsables inscriptos · Emprendedores ·
                 PYMES
               </p>

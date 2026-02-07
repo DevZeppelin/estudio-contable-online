@@ -15,7 +15,7 @@ export default function FinalCTA() {
           <div className="mt-7">
             <a
               href="#reservar"
-              className="inline-flex btn items-center justify-center rounded-xl  px-6 py-3 text-sm font-semibold text-bg hover:opacity-95"
+              className="inline-flex btn items-center justify-center rounded-xl  px-6 py-3 text-base font-semibold text-bg hover:opacity-95"
             >
               🟢 Reservar turno ahora
             </a>
