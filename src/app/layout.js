@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SITE } from "@/lib/seo";
 import { Inter, Sora } from "next/font/google";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -56,6 +57,23 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es-AR">
+      <head>
+        {/* Carga gtag */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17944842046"
+          strategy="afterInteractive"
+        />
+
+        {/* Configuración */}
+        <Script id="google-ads-gtag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17944842046');
+          `}
+        </Script>
+      </head>
       <body className={`${inter.variable} ${sora.variable}`}>
         <a
           href="#contenido"
