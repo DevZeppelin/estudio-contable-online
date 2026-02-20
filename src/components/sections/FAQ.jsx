@@ -2,17 +2,32 @@ import Container from "@/components/Container";
 
 const faqs = [
   {
-    q: "¿Cómo es la reunión?",
-    a: "Es una reunión 100% ONLINE donde analizamos tu situación y te explicamos qué hacer.",
-  },
-  { q: "¿Cuánto dura?", a: "20 minutos." },
-  {
-    q: "¿Tengo que llevar algo?",
-    a: "Si tenés datos o claves, mejor. Si no, lo vemos en la reunión.",
+    q: "¿Cuándo necesito un contador en Mendoza?",
+    a: "Necesitás un contador en Mendoza cuando empezás una actividad económica, te inscribís en monotributo o responsable inscripto, tenés empleados, recibís intimaciones de ARCA o querés ordenar tus impuestos. Un estudio contable te ayuda a evitar multas, pagar lo correcto y planificar mejor tu negocio.",
   },
   {
-    q: "¿Después de la reunión tengo que contratar el servicio?",
-    a: "No. Primero entendés tu situación y luego decidís.",
+    q: "¿Atienden monotributistas y autónomos?",
+    a: "Sí. Trabajamos con monotributistas, autónomos y profesionales independientes en Mendoza. Nos encargamos de inscripción, recategorización, presentación mensual y asesoramiento para que pagues lo justo y evites problemas con AFIP.",
+  },
+  {
+    q: "¿También trabajan con empresas y PYMES?",
+    a: "Sí. Nuestro estudio contable en Mendoza asesora a PYMES y sociedades en liquidación de impuestos, sueldos, balances, planificación fiscal y cumplimiento de obligaciones ante AFIP y Rentas Mendoza.",
+  },
+  {
+    q: "¿Qué pasa si tengo una deuda con ARCA?",
+    a: "Primero analizamos tu situación. Luego te explicamos claramente el monto real, intereses y opciones de plan de pago. Nuestro objetivo es regularizar tu situación y devolverte tranquilidad sin que pagues de más.",
+  },
+  {
+    q: "¿Puedo hacer una consulta antes de contratar?",
+    a: "Sí. Podés agendar una reunión para analizar tu caso puntual. Evaluamos tu situación y te explicamos cómo podemos ayudarte antes de que tomes una decisión.",
+  },
+  {
+    q: "¿Atienden de forma presencial o online?",
+    a: "Brindamos atención online y también reuniones coordinadas. Muchos clientes eligen resolver todo por WhatsApp o videollamada porque ahorra tiempo y es más práctico.",
+  },
+  {
+    q: "¿Cómo empiezo a trabajar con ustedes?",
+    a: "Es muy simple. Podés enviarnos un mensaje por WhatsApp o agendar una reunión. Analizamos tu situación y te indicamos los pasos para comenzar. Nos ocupamos de todo el proceso para que no tengas que preocuparte.",
   },
 ];
 

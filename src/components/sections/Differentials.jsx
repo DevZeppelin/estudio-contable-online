@@ -14,7 +14,7 @@ export default function Differentials() {
     <section id="diferencial" className=" ">
       <Container className="py-14">
         <h2 className="text-2xl font-extrabold text-azul">
-          ¿Por qué elegir 100% ONLINE – Estudio Contable en Mendoza?
+          Estudio Contable en Mendoza?
         </h2>
         <p className="mt-3 max-w-3xl text-muted">
           👉 Nuestro objetivo es que te quedes tranquilo y tengas claridad.

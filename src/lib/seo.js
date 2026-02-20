@@ -1,5 +1,5 @@
 export const SITE = {
-    name: "100% Online – Estudio Contable en Mendoza",
+    name: "Estudio Contable en Mendoza | Contador Matriculado",
     domain: "https://www.estudio-contable-mendoza.com.ar",
     phoneE164: "+542615740182",
     phoneDisplay: "2615 74-0182",
@@ -9,7 +9,7 @@ export const SITE = {
     addressCountry: "AR",
     brandPerson: "Cr. Dario Vallinas – C.P.C.E.M.D.Z",
     description:
-        "Estudio Contable en Mendoza 100% online. Resolvé AFIP/ARCA, ATM, impuestos y desorden contable en una reunión clara y práctica. Atención directa con contador público.",
+        "Estudio Contable en Mendoza. Atención directa con Contador Público Matriculado en el C.P.C.E.M.D.Z. Consultá por WhatsApp o reservá una reunión sin cargo.",
     ogImage: "/og.jpg", // agregá una imagen 1200x630
 };
 

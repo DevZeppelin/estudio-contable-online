@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { SITE } from "@/lib/seo";
 import { Inter, Sora } from "next/font/google";
 import Script from "next/script";
+import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,7 +22,7 @@ const sora = Sora({
 export const metadata = {
   metadataBase: new URL(SITE.domain),
   title: {
-    default: "Estudio Contable en Mendoza 100% Online | Turno en minutos",
+    default: "Estudio Contable en Mendoza | Contador Matriculado | Turno en minutos",
     template: "%s | Estudio Contable en Mendoza",
   },
   description: SITE.description,
@@ -29,7 +30,7 @@ export const metadata = {
   openGraph: {
     type: "website",
     url: SITE.domain,
-    title: "Estudio Contable en Mendoza 100% Online",
+    title: "Estudio Contable en Mendoza | Contador Matriculado",
     description: SITE.description,
     siteName: SITE.name,
     images: [{ url: SITE.ogImage, width: 1200, height: 630, alt: SITE.name }],
@@ -37,7 +38,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Estudio Contable en Mendoza 100% Online",
+    title: "Estudio Contable en Mendoza | Contador Matriculado",
     description: SITE.description,
     images: [SITE.ogImage],
   },
@@ -84,6 +85,10 @@ export default function RootLayout({ children }) {
 
         <Header />
         <main id="contenido">{children}</main>
+        <WhatsAppFloatingButton
+          phone="542615740182"
+          message="Hola! Quiero hacer una consulta."
+        />
         <Footer />
       </body>
     </html>

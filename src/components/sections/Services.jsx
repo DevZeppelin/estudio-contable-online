@@ -47,12 +47,6 @@ export default function Services() {
             </article>
           ))}
         </div>
-
-        <div className="mt-8 rounded-2xl p-5">
-          <p className="text-base font-semibold text-azul">
-            📌 Todo el servicio es 100% ONLINE, Simple y Ordenado.
-          </p>
-        </div>
       </Container>
     </section>
   );

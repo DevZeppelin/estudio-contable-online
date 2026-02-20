@@ -14,7 +14,7 @@ import Locations from "@/components/sections/Locations";
 import FinalCTA from "@/components/sections/FinalCTA";
 
 export const metadata = {
-  title: "Estudio Contable en Mendoza 100% Online",
+  title: "Estudio Contable en Mendoza",
   alternates: { canonical: "/" },
 };
 

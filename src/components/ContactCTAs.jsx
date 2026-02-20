@@ -2,14 +2,15 @@ import CalendlyPopupButton from "./CalendlyPopupButton";
 
 export default function ContactCTAs({
   calendlyUrl = "https://calendly.com/contador-publico-matriculado-mendoza",
-  linkedinUrl = "https://www.linkedin.com/in/dario-vallinas-contador-publico-mendoza",
-  title = "Reservá tu reunión online",
-  subtitle = "Elegí día y horario. La reunión es 100% online y confidencial.",
+  whatsappUrl = "https://wa.me/542615740182",
+  title = "¿Necesitás resolver tu situación contable?",
+  subtitle = "Elegí la forma más cómoda para contactarnos.",
 }) {
   return (
-    <div className="rounded-3xl bg-white/70 backdrop-blur-md p-6 shadow-[0_12px_35px_rgba(15,23,42,0.10)] sm:p-8">
-      <div className="flex flex-col gap-2">
-        <h3 className="text-xl font-extrabold tracking-tight text-[rgb(var(--azul))]">
+    <div className="rounded-3xl bg-white/70 backdrop-blur-md p-6 shadow-[0_14px_40px_rgba(15,23,42,0.12)] sm:p-8">
+      {/* TITULO */}
+      <div className="flex flex-col gap-2 text-center sm:text-left">
+        <h3 className="text-2xl font-extrabold tracking-tight text-[rgb(var(--azul))]">
           {title}
         </h3>
         <p className="text-base leading-relaxed text-[rgb(var(--muted))]">
@@ -17,30 +18,47 @@ export default function ContactCTAs({
         </p>
       </div>
 
-      <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-        <CalendlyPopupButton
-          url={calendlyUrl}
-          text="Programe una reunión conmigo"
-          className="w-full sm:w-auto"
-        />
-
+      {/* BOTONES */}
+      <div className="mt-8 flex flex-col gap-4">
+        {/* 🟢 BOTÓN PRINCIPAL */}
         <a
-          href={linkedinUrl}
+          href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className={[
-            "inline-flex w-full items-center justify-center gap-2 rounded-xl px-5 py-3 text-base font-semibold",
-            "bg-white/80 text-[rgb(var(--azul))] shadow-sm ring-1 ring-black/5 transition hover:bg-white",
-            "focus:outline-none focus:ring-2 focus:ring-[rgb(var(--celeste)/0.35)] focus:ring-offset-2 focus:ring-offset-transparent",
-            "sm:w-auto",
-          ].join(" ")}
-          aria-label="Abrir perfil de LinkedIn"
+          className="
+            flex w-full items-center justify-center gap-3
+            rounded-2xl px-6 py-4
+            text-lg font-semibold text-white
+            bg-[linear-gradient(135deg,rgb(var(--cian)),rgb(var(--celeste)))]
+            shadow-[0_14px_35px_rgba(15,23,42,0.25)]
+            transition hover:opacity-95 hover:-translate-y-0.5
+          "
         >
-          Ver LinkedIn
+          🟢 Hablar por WhatsApp ahora
         </a>
+
+        {/* 🟡 BOTÓN SECUNDARIO */}
+        <CalendlyPopupButton
+          url={calendlyUrl}
+          text="Agendar reunión orientativa sin cargo"
+          className="
+            w-full rounded-2xl px-6 py-3
+            text-base font-semibold
+            bg-white text-[rgb(var(--azul))]
+            ring-1 ring-black/10
+            shadow-sm
+            hover:bg-slate-50
+          "
+        />
+
+        {/* TEXTO PEQUEÑO */}
+        <p className="text-center text-sm text-[rgb(var(--muted))]">
+          20 minutos – Online o Presencial – Confidencial – Sin compromiso
+        </p>
       </div>
 
-      <p className="mt-4 text-base text-[rgb(var(--muted))]">
+      {/* NOTA DE CONFIANZA */}
+      <p className="mt-6 text-xs text-center text-[rgb(var(--muted))]">
         🔒 La información que brindes se utiliza solo para coordinar la reunión.
       </p>
     </div>
