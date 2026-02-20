@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 export default function CalendlyPopupButton({
-    url = "https://calendly.com/contador-publico-matriculado-mendoza",
+    url = "#reservar",
     text = "Programe una reunión conmigo",
     className = "",
 }) {

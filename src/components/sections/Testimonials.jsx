@@ -112,11 +112,12 @@ export default function Testimonials() {
               🟢 Escribir por WhatsApp
             </a>
 
-            <CalendlyPopupButton
-              url="https://calendly.com/contador-publico-matriculado-mendoza"
-              text="Agendar reunión"
-              className="btn btn-outline w-full sm:w-auto"
-            />
+            <a
+              href="#reservar"
+              className="inline-flex btn items-center justify-center rounded-xl  px-5 py-3 text-base font-semibold text-bg shadow-soft hover:opacity-95"
+            >
+              🟢 Agendar reunión
+            </a>
           </div>
 
           <p className="mt-4 text-center text-sm text-[rgb(var(--muted))]">

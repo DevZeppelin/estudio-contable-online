@@ -1,7 +1,7 @@
 import CalendlyPopupButton from "./CalendlyPopupButton";
 
 export default function ContactCTAs({
-  calendlyUrl = "https://calendly.com/contador-publico-matriculado-mendoza",
+  calendlyUrl = "#reservar",
   whatsappUrl = "https://wa.me/542615740182",
   title = "¿Necesitás resolver tu situación contable?",
   subtitle = "Elegí la forma más cómoda para contactarnos.",
@@ -38,18 +38,12 @@ export default function ContactCTAs({
         </a>
 
         {/* 🟡 BOTÓN SECUNDARIO */}
-        <CalendlyPopupButton
-          url={calendlyUrl}
-          text="Agendar reunión orientativa sin cargo"
-          className="
-            w-full rounded-2xl px-6 py-3
-            text-base font-semibold
-            bg-white text-[rgb(var(--azul))]
-            ring-1 ring-black/10
-            shadow-sm
-            hover:bg-slate-50
-          "
-        />
+        <a
+          href="#reservar"
+          className="inline-flex btn items-center justify-center rounded-xl  px-5 py-3 text-base font-semibold text-bg shadow-soft hover:opacity-95"
+        >
+          Agendar reunión orientaativa sin cargo
+        </a>
 
         {/* TEXTO PEQUEÑO */}
         <p className="text-center text-sm text-[rgb(var(--muted))]">

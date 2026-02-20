@@ -99,18 +99,12 @@ export default function Hero() {
               </a>
 
               {/* Secundario Calendly */}
-              <CalendlyPopupButton
-                url={calendlyUrl}
-                text="Agendar reunión orientativa sin cargo"
-                className="
-                  w-full rounded-2xl px-6 py-3
-                  text-base font-semibold
-                  bg-white/80 text-[rgb(var(--azul))]
-                  ring-1 ring-black/10 shadow-sm
-                  transition hover:bg-white
-                  sm:w-auto
-                "
-              />
+              <a
+                href="#reservar"
+                className="inline-flex btn items-center justify-center rounded-xl  px-5 py-3 text-base font-semibold text-bg shadow-soft hover:opacity-95"
+              >
+                🟢 Agendar reunión orientativa sin cargo
+              </a>
             </div>
 
             {/* Nota pequeña */}
