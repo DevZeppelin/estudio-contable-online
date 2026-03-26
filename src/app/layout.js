@@ -7,6 +7,8 @@ import { Inter, Sora } from "next/font/google";
 import Script from "next/script";
 import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 
+import { GoogleTagManager } from "@next/third-parties/google"
+
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -59,23 +61,27 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es-AR">
       <head>
-        {/* Carga gtag */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-17944842046"
-          strategy="afterInteractive"
-        />
-
-        {/* Configuración */}
-        <Script id="google-ads-gtag" strategy="afterInteractive">
+        <Script id="gtm-script" strategy="afterInteractive">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-17944842046');
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-WXQ3JNXK');
           `}
         </Script>
       </head>
       <body className={`${inter.variable} ${sora.variable}`}>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-WXQ3JNXK"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+
+
         <a
           href="#contenido"
           className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-lg focus: focus:px-4 focus:py-2 focus:shadow-soft"
@@ -84,6 +90,7 @@ export default function RootLayout({ children }) {
         </a>
 
         <Header />
+
         <main id="contenido">{children}</main>
         <WhatsAppFloatingButton
           phone="542615740182"
