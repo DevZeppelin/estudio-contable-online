@@ -36,8 +36,9 @@ export default function Locations() {
     <section className="">
       <Container className="py-14">
         <h2 className="text-2xl font-extrabold text-azul">
-          Estudio Contable en Mendoza – Atención Online
+          Estudio Contable en Mendoza 🌟 Contador Público Matriculado
         </h2>
+        <p className="mt-3 text-muted">Atención online</p>
         <p className="mt-3 text-muted">Atendemos clientes en:</p>
 
         <div className="mt-6 flex flex-wrap gap-2">

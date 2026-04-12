@@ -9,11 +9,11 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden">
       {/* Fondo suave */}
-      <div className="absolute inset-0 -z-10">
+      {/* <div className="absolute inset-0 -z-10">
         <div className="absolute -top-28 right-0 h-80 w-80 rounded-full bg-[rgb(var(--pastel)/0.55)] blur-3xl" />
         <div className="absolute -bottom-32 left-0 h-96 w-96 rounded-full bg-[rgb(var(--cian)/0.18)] blur-3xl" />
         <div className="absolute inset-0 bg-gradient-to-b from-white/40 to-transparent" />
-      </div>
+      </div> */}
 
       <Container className="py-14 sm:py-20">
         <div className="grid items-center gap-10 lg:grid-cols-2">
@@ -41,7 +41,10 @@ export default function Hero() {
             <h1 className="text-4xl font-extrabold tracking-tight text-[rgb(var(--azul))] sm:text-6xl">
               Estudio Contable en Mendoza
               <span className="mt-2 block text-2xl font-bold text-[rgb(var(--azul))] sm:text-3xl">
-                Asesoramiento Profesional con Contador Matriculado
+                🌟 Contador Público Matriculado
+              </span>
+              <span className="mt-2 italic opacity-55 block text-2xl font-bold text-[rgb(var(--azul))] sm:text-3xl">
+                Asesoramiento Profesional
               </span>
             </h1>
 

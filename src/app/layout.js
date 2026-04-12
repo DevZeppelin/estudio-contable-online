@@ -24,7 +24,7 @@ const sora = Sora({
 export const metadata = {
   metadataBase: new URL(SITE.domain),
   title: {
-    default: "Estudio Contable en Mendoza | Contador Matriculado | Turno en minutos",
+    default: "Estudio Contable en Mendoza 🌟 Contador Público Matriculado",
     template: "%s | Estudio Contable en Mendoza",
   },
   description: SITE.description,
@@ -32,7 +32,7 @@ export const metadata = {
   openGraph: {
     type: "website",
     url: SITE.domain,
-    title: "Estudio Contable en Mendoza | Contador Matriculado",
+    title: "Estudio Contable en Mendoza 🌟 Contador Público Matriculado",
     description: SITE.description,
     siteName: SITE.name,
     images: [{ url: SITE.ogImage, width: 1200, height: 630, alt: SITE.name }],
@@ -40,7 +40,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Estudio Contable en Mendoza | Contador Matriculado",
+    title: "Estudio Contable en Mendoza 🌟 Contador Público Matriculado",
     description: SITE.description,
     images: [SITE.ogImage],
   },

@@ -12,6 +12,7 @@ import Booking from "@/components/sections/Booking";
 import MicroCTAs from "@/components/sections/MicroCTAs";
 import Locations from "@/components/sections/Locations";
 import FinalCTA from "@/components/sections/FinalCTA";
+import ResponsiveImage from "@/components/sections/responsive";
 
 export const metadata = {
   title: "Estudio Contable en Mendoza",
@@ -27,6 +28,11 @@ export default function Page() {
         id="jsonld-professionalservice"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <ResponsiveImage
+        src="/images/hero.jpeg"
+        alt="Imagen principal"
+        priority
       />
       <Hero />
       <Problems />

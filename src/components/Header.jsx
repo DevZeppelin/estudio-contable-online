@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Container from "./Container";
 
 const nav = [
@@ -5,7 +6,7 @@ const nav = [
   { label: "Por qué elegirnos", href: "#diferencial" },
   { label: "Opiniones", href: "#opiniones" },
   { label: "Preguntas", href: "#faq" },
-  { label: "Reservar", href: "#reservar" },
+  { label: "Hablá con el Contador", href: "https://wa.me/542615740182" },
 ];
 
 export default function Header() {
@@ -15,11 +16,9 @@ export default function Header() {
         <a href="#contenido" className="flex items-center gap-2">
           <div className="leading-tight">
             <p className="text-base font-semibold text-azul">
-              Estudio Contable en Mendoza
+              Estudio Contable
             </p>
-            <p className="hidden md:block text-base text-muted">
-              Contador Matriculado
-            </p>
+            <p className="hidden md:block text-base text-muted">en Mendoza</p>
           </div>
         </a>
 
@@ -27,15 +26,27 @@ export default function Header() {
           className="hidden items-center gap-6 md:flex"
           aria-label="Principal"
         >
-          {nav.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-base text-muted hover:text-azul"
-            >
-              {item.label}
-            </a>
-          ))}
+          {nav.map((item) =>
+            item.label === "Hablá con el Contador" ? (
+              <Link
+                key={item.href}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-base text-muted hover:text-azul"
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-base text-muted hover:text-azul"
+              >
+                {item.label}
+              </Link>
+            ),
+          )}
         </nav>
 
         <div className="flex items-center gap-2">
