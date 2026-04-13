@@ -15,7 +15,7 @@ import FinalCTA from "@/components/sections/FinalCTA";
 import ResponsiveImage from "@/components/sections/responsive";
 
 export const metadata = {
-  title: "Estudio Contable en Mendoza",
+  title: "Estudio Contable en Mendoza 🌟 Contador Público Matriculado",
   alternates: { canonical: "/" },
 };
 
