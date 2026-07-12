@@ -1,24 +1,32 @@
 @import "tailwindcss";
 
+/* Paleta tomada de la landing corregida (estudio-contable-mendoza-CORREGIDA.html) */
 @theme {
-  --color-celeste: #288ea8;
-  --color-border: #fefefe;
-  --color-cian: #39b6b9;
-  --color-celeste: #288ea8;
-  --color-azul: #263e71;
-  --color-pastel: #b6d5dc;
-  --color-text: #0f172a;
-  --color-muted: #475569;
+  --color-azul: #0a1f3c; /* primary — navy */
+  --color-azul-light: #1a3a6b; /* primary-light */
+  --color-celeste: #2563eb; /* accent */
+  --color-cian: #3b82f6; /* accent-light */
+  --color-pastel: #dbeafe; /* azul muy claro para fondos de chips */
+  --color-verde: #25d366; /* WhatsApp */
+  --color-verde-dark: #128c7e;
+  --color-gold: #f59e0b;
+  --color-text: #1a1a2e;
+  --color-muted: #4a5568;
+  --color-light: #f8fafc; /* fondo alternado de secciones */
+  --color-border: #e2e8f0;
 }
 
 :root {
-  --bg: 254 254 254;
-  --cian: 57 182 185;
-  --celeste: 40 142 168;
-  --azul: 38 62 113;
-  --pastel: 182 213 220;
-  --text: 15 23 42;
-  --muted: 71 85 105;
+  --bg: 255 255 255;
+  --azul: 10 31 60;
+  --azul-light: 26 58 107;
+  --celeste: 37 99 235;
+  --cian: 59 130 246;
+  --pastel: 219 234 254;
+  --verde: 37 211 102;
+  --gold: 245 158 11;
+  --text: 26 26 46;
+  --muted: 74 85 104;
   --font-sans:
     ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial,
     "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
@@ -26,24 +34,18 @@
     ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
 }
 
-p {
-  font-size: large;
+html {
+  scroll-behavior: smooth;
+}
+
+/* Los anclajes (#servicios, #reservar…) no quedan tapados por el header sticky */
+section[id] {
+  scroll-margin-top: 80px;
 }
 
 body {
-  background:
-    radial-gradient(
-      800px 400px at 80% -10%,
-      rgba(57, 182, 185, 0.15),
-      transparent 60%
-    ),
-    radial-gradient(
-      700px 350px at -10% 30%,
-      rgba(182, 213, 220, 0.25),
-      transparent 60%
-    ),
-    linear-gradient(to bottom, #ffffff 0%, #f7fafb 100%);
-  color: var(--text);
+  background: #ffffff;
+  color: rgb(var(--text));
 }
 
 h1,
@@ -54,54 +56,184 @@ h3 {
 }
 
 @layer components {
-  /* 🔘 BOTÓN BASE – se aplica a TODOS los <a> */
+  /* 🔘 BOTÓN BASE */
   .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
 
-    padding: 0.75rem 1.25rem;
-    border-radius: 0.75rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.65rem;
 
     font-weight: 600;
-    font-size: 0.875rem;
-    line-height: 1;
+    font-size: 0.9375rem;
+    line-height: 1.2;
 
     text-decoration: none;
     cursor: pointer;
 
     transition:
-      transform 0.15s ease,
-      box-shadow 0.15s ease,
-      background-color 0.15s ease,
-      opacity 0.15s ease;
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      background-color 0.2s ease,
+      opacity 0.2s ease;
 
-    /* 🎨 Estilo default */
     color: white;
-    background: linear-gradient(135deg, rgb(var(--cian)), rgb(var(--celeste)));
-
-    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.18);
+    background: rgb(var(--celeste));
+    box-shadow: 0 8px 22px rgba(10, 31, 60, 0.18);
   }
 
-  /* Hover */
   .btn:hover {
-    opacity: 0.95;
-    transform: translateY(-1px);
-    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.22);
+    background: rgb(var(--cian));
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(10, 31, 60, 0.22);
   }
 
-  /* Active */
   .btn:active {
     transform: translateY(0);
-    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.18);
+    box-shadow: 0 6px 16px rgba(10, 31, 60, 0.18);
   }
 
-  /* Focus accesible */
   .btn:focus-visible {
     outline: none;
     box-shadow:
       0 0 0 3px rgb(var(--cian) / 0.35),
-      0 10px 25px rgba(15, 23, 42, 0.2);
+      0 10px 25px rgba(10, 31, 60, 0.2);
+  }
+
+  /* Botón WhatsApp */
+  .btn-green {
+    background: #25d366;
+  }
+  .btn-green:hover {
+    background: #128c7e;
+    box-shadow: 0 10px 26px rgba(37, 211, 102, 0.35);
+  }
+
+  /* Botón fantasma para fondos oscuros */
+  .btn-ghost {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    box-shadow: none;
+  }
+  .btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+    box-shadow: none;
+  }
+
+  /* Tarjeta base clara */
+  .card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.14);
+  }
+
+  /* Etiqueta superior de sección */
+  .section-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgb(var(--celeste));
+  }
+}
+
+/* ============================================================
+   ANIMACIONES SUTILES
+   Los estados "ocultos" solo se aplican cuando hay JS
+   (html.js-reveal, agregado por <ScrollReveal />): sin JS o para
+   crawlers, todo el contenido queda visible.
+   ============================================================ */
+
+/* Entrada del hero al cargar la página */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-anim {
+  animation: fade-up 0.65s ease-out both;
+}
+.hero-anim-1 {
+  animation-delay: 0.1s;
+}
+.hero-anim-2 {
+  animation-delay: 0.2s;
+}
+.hero-anim-3 {
+  animation-delay: 0.3s;
+}
+.hero-anim-4 {
+  animation-delay: 0.4s;
+}
+
+/* Revelado de secciones al hacer scroll */
+html.js-reveal main section,
+html.js-reveal .reveal-item {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+html.js-reveal main section.is-visible,
+html.js-reveal .reveal-item.is-visible,
+html.js-reveal main section.is-visible .reveal-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Pequeño escalonado entre tarjetas de una misma sección */
+html.js-reveal main section.is-visible .reveal-item:nth-child(2) {
+  transition-delay: 0.08s;
+}
+html.js-reveal main section.is-visible .reveal-item:nth-child(3) {
+  transition-delay: 0.16s;
+}
+html.js-reveal main section.is-visible .reveal-item:nth-child(4) {
+  transition-delay: 0.24s;
+}
+html.js-reveal main section.is-visible .reveal-item:nth-child(5) {
+  transition-delay: 0.32s;
+}
+html.js-reveal main section.is-visible .reveal-item:nth-child(6) {
+  transition-delay: 0.4s;
+}
+
+/* Accesibilidad: sin animaciones si el usuario las desactivó */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .hero-anim,
+  .hero-anim-1,
+  .hero-anim-2,
+  .hero-anim-3,
+  .hero-anim-4 {
+    animation: none;
+  }
+  html.js-reveal main section,
+  html.js-reveal .reveal-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

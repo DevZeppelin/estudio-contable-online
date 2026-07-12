@@ -1,30 +1,30 @@
 import Container from "@/components/Container";
+import { SITE } from "@/lib/seo";
 
 export default function FinalCTA() {
   return (
-    <section className="">
-      <Container className="py-14">
-        <div className="rounded-3xl  p-8 text-bg shadow-soft sm:p-12">
-          <h2 className="text-2xl font-extrabold sm:text-3xl">
-            Ordená tu situación contable hoy
-          </h2>
-          <p className="mt-3 max-w-2xl text-bg/90">
-            Si estás buscando un contador en Mendoza que te brinde asesoramiento
-            profesional, claro y confiable, estás en el lugar correcto.
-          </p>
-          <p className="mt-3 max-w-2xl text-bg/90">
-            Agendá tu reunión orientativa o escribinos por WhatsApp y empezá a
-            resolver tu situación impositiva con respaldo profesional.
-          </p>
+    <section id="cta-final">
+      <Container className="py-16 text-center sm:py-20">
+        <h2 className="text-2xl font-extrabold text-azul sm:text-3xl">
+          Ordená tu situación contable hoy
+        </h2>
+        <p className="mx-auto mt-3 max-w-xl text-lg text-muted">
+          Si estás buscando un contador en Mendoza que te brinde asesoramiento
+          profesional, claro y confiable, estás en el lugar correcto.
+        </p>
 
-          <div className="mt-7">
-            <a
-              href="#reservar"
-              className="inline-flex btn items-center justify-center rounded-xl  px-6 py-3 text-base font-semibold text-bg hover:opacity-95"
-            >
-              🟢 Reservar turno ahora
-            </a>
-          </div>
+        <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+          <a href="#reservar" className="btn px-8 py-4 text-base">
+            🟢 Reservar turno ahora
+          </a>
+          <a
+            href={SITE.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-green px-8 py-4 text-base"
+          >
+            💬 Escribir por WhatsApp
+          </a>
         </div>
       </Container>
     </section>

@@ -6,8 +6,7 @@ import { SITE } from "@/lib/seo";
 import { Inter, Sora } from "next/font/google";
 import Script from "next/script";
 import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
-
-import { GoogleTagManager } from "@next/third-parties/google"
+import ScrollReveal from "@/components/ScrollReveal";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,7 +23,7 @@ const sora = Sora({
 export const metadata = {
   metadataBase: new URL(SITE.domain),
   title: {
-    default: "Estudio Contable en Mendoza 🌟 Contador Público Matriculado",
+    default: SITE.title,
     template: "%s | Estudio Contable en Mendoza",
   },
   description: SITE.description,
@@ -32,16 +31,18 @@ export const metadata = {
   openGraph: {
     type: "website",
     url: SITE.domain,
-    title: "Estudio Contable en Mendoza 🌟 Contador Público Matriculado",
-    description: SITE.description,
+    title: SITE.title,
+    description:
+      "Estudio Contable en Mendoza. Contador Público Matriculado en C.P.C.E.M.D.Z. Reunión orientativa sin cargo.",
     siteName: SITE.name,
     images: [{ url: SITE.ogImage, width: 1200, height: 630, alt: SITE.name }],
     locale: "es_AR",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Estudio Contable en Mendoza 🌟 Contador Público Matriculado",
-    description: SITE.description,
+    title: SITE.title,
+    description:
+      "Estudio Contable en Mendoza. Contador Público Matriculado en C.P.C.E.M.D.Z. Reunión orientativa sin cargo.",
     images: [SITE.ogImage],
   },
   robots: {
@@ -81,14 +82,14 @@ export default function RootLayout({ children }) {
           />
         </noscript>
 
-
         <a
           href="#contenido"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-lg focus: focus:px-4 focus:py-2 focus:shadow-soft"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:shadow-soft"
         >
           Saltar al contenido
         </a>
 
+        <ScrollReveal />
         <Header />
 
         <main id="contenido">{children}</main>
