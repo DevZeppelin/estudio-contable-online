@@ -32,8 +32,7 @@ export const metadata = {
     type: "website",
     url: SITE.domain,
     title: SITE.title,
-    description:
-      "Estudio Contable en Mendoza. Contador Público Matriculado en C.P.C.E.M.D.Z. Reunión orientativa sin cargo.",
+    description: SITE.ogDescription,
     siteName: SITE.name,
     images: [{ url: SITE.ogImage, width: 1200, height: 630, alt: SITE.name }],
     locale: "es_AR",
@@ -41,9 +40,14 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: SITE.title,
-    description:
-      "Estudio Contable en Mendoza. Contador Público Matriculado en C.P.C.E.M.D.Z. Reunión orientativa sin cargo.",
+    description: SITE.ogDescription,
     images: [SITE.ogImage],
+  },
+  other: {
+    "geo.region": SITE.geo.region,
+    "geo.placename": SITE.geo.placename,
+    "geo.position": `${SITE.geo.lat};${SITE.geo.lng}`,
+    ICBM: `${SITE.geo.lat}, ${SITE.geo.lng}`,
   },
   robots: {
     index: true,

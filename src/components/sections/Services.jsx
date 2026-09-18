@@ -3,61 +3,63 @@ import Container from "@/components/Container";
 const services = [
   {
     icon: "📋",
-    title: "Monotributo",
-    desc: "Altas, recategorizaciones y control mensual. Evitá pasarte de categoría y pagar multas innecesarias.",
-  },
-  {
-    icon: "📊",
-    title: "Responsables Inscriptos",
-    desc: "IVA, Ganancias e Ingresos Brutos. Presentaciones mensuales y cumplimiento ante AFIP/ARCA.",
-  },
-  {
-    icon: "⚖️",
-    title: "Regularizaciones",
-    desc: "Gestiones ante ARCA y ATM Mendoza. Análisis de deudas y planes de pago concretos.",
-  },
-  {
-    icon: "🎯",
-    title: "Asesoramiento Integral",
-    desc: "Contable e impositivo, claro y práctico. Sabés qué pagás, cuándo y por qué.",
+    title: "Monotributistas y Autónomos",
+    desc: "Inscripción, recategorización, baja y liquidación mensual. Asesoramiento ante ARCA.",
   },
   {
     icon: "🏢",
-    title: "Contabilidad para PYMES",
-    desc: "Orden, seguimiento y toma de decisiones. Balances, sueldos y planificación fiscal.",
+    title: "Responsables Inscriptos y PyMEs",
+    desc: "IVA, Ganancias e Ingresos Brutos. Planificación fiscal y optimización impositiva.",
   },
   {
-    icon: "💬",
-    title: "Consultas Puntuales",
-    desc: "Acompañamiento mensual para tener siempre un contador de referencia cuando lo necesitás.",
+    icon: "👥",
+    title: "Liquidación de Sueldos",
+    desc: "Recibos, cargas sociales, F931 y asesoramiento laboral para empleadores mendocinos.",
+  },
+  {
+    icon: "📊",
+    title: "Balances y Certificaciones",
+    desc: "Estados financieros anuales, certificaciones contables, licitaciones y créditos.",
+  },
+  {
+    icon: "🏛️",
+    title: "Constitución de Sociedades",
+    desc: "SAS, SRL y SA en Mendoza. Asesoramiento jurídico-contable desde el inicio.",
+  },
+  {
+    icon: "🗺️",
+    title: "Convenio Multilateral",
+    desc: "Alta, mantenimiento y cumplimiento para actividades en más de una provincia.",
   },
 ];
 
 export default function Services() {
   return (
     <section id="servicios" className="bg-light">
-      <Container className="py-16 sm:py-20">
-        <div className="mx-auto max-w-2xl text-center">
-          <span className="section-label">Lo que hacemos</span>
-          <h2 className="mt-2 text-2xl font-extrabold text-azul sm:text-3xl">
-            ¿Cómo te ayuda nuestro Estudio Contable en Mendoza?
+      <Container className="py-12 sm:py-16">
+        <div className="mx-auto mb-10 max-w-2xl text-center">
+          <span className="section-label mb-2.5 text-[11px]">
+            Servicios contables
+          </span>
+          <h2 className="mb-3 text-[clamp(20px,4vw,34px)] font-extrabold leading-tight text-azul">
+            ¿Qué hace nuestro estudio contable en Mendoza?
           </h2>
-          <p className="mt-3 text-muted">
-            No solo hacemos trámites. Te ayudamos a entender tu situación y
-            tomar decisiones correctas.
+          <p className="mx-auto max-w-[540px] text-base text-muted">
+            Servicios para monotributistas, autónomos, responsables inscriptos y
+            empresas en Mendoza.
           </p>
         </div>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-[repeat(auto-fit,minmax(240px,1fr))]">
           {services.map((s) => (
-            <article key={s.title} className="reveal-item card p-6">
-              <span className="text-3xl" aria-hidden="true">
+            <article key={s.title} className="reveal-item card p-[22px]">
+              <div className="mb-3 text-[28px]" aria-hidden="true">
                 {s.icon}
-              </span>
-              <h3 className="mt-3 text-base font-bold text-azul">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
-                {s.desc}
-              </p>
+              </div>
+              <h3 className="mb-[7px] text-[15px] font-bold text-azul">
+                {s.title}
+              </h3>
+              <p className="text-[13px] leading-relaxed text-muted">{s.desc}</p>
             </article>
           ))}
         </div>

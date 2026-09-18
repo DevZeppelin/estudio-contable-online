@@ -1,34 +1,61 @@
 import Container from "@/components/Container";
+import ReviewsCarousel from "@/components/ReviewsCarousel";
 import { SITE } from "@/lib/seo";
 
-// Reseñas reales de la ficha de Google Business Profile
 const testimonials = [
   {
     initials: "MD",
     color: "#2563eb",
-    name: "Mariela Diaz",
-    meta: "Mendoza",
+    name: "Mariela Díaz",
+    meta: "Monotributista · Mendoza",
     quote:
-      "Super profesional, siempre resolviendo con rapidez y profesionalismo, totalmente recomendable, hace 6 años que me resuelve cada problema contable.",
-    tag: "✓ Capacidad de respuesta",
+      "Super profesional, siempre resolviendo con rapidez y profesionalismo. Hace 6 años que me resuelve cada problema contable. Totalmente recomendable.",
+    tag: "Monotributista · 6 años cliente",
   },
   {
     initials: "GL",
-    color: "#0d9488",
-    name: "Grecia Lopez",
-    meta: "Mendoza",
+    color: "#059669",
+    name: "Grecia López",
+    meta: "Autónoma · Mendoza",
     quote:
-      "Excelente profesional Darío. Me solucionó mi problema en horas. Muy recomendable.",
-    tag: "✓ Resolución rápida",
+      "Excelente profesional. Me solucionó mi problema con ARCA en horas. Muy recomendable. Rápido y claro en todo momento.",
+    tag: "Asesoramiento ARCA",
   },
   {
-    initials: "AH",
-    color: "#d97706",
-    name: "Alberto Herrera",
-    meta: "Mendoza",
+    initials: "DH",
+    color: "#7c3aed",
+    name: "Delfina Hueter",
+    meta: "Profesional independiente · Mendoza",
     quote:
-      "El buen asesoramiento y disponibilidad, y que sea online y rápido, muy recomendable.",
-    tag: "✓ 100% online · disponible",
+      "Un genio. Asesoramiento rapidísimo y muy amable. Me explicó todo sobre el monotributo sin apuro. Muchas gracias Dr. Vallinas.",
+    tag: "Monotributo",
+  },
+  {
+    initials: "GG",
+    color: "#d97706",
+    name: "Gabriel Gil",
+    meta: "Comerciante · Mendoza",
+    quote:
+      "Excelente calidad de servicios para mi PyME. Muy rápido, muy atento. Siempre disponible cuando lo necesito. 10 puntos.",
+    tag: "PyME",
+  },
+  {
+    initials: "AA",
+    color: "#0891b2",
+    name: "Ayelen Anze",
+    meta: "Emprendedora · Mendoza",
+    quote:
+      "Recomiendo muchísimo. Me ayudó a inscribir a mi mamá en monotributo respondiendo cada duda sin ningún problema.",
+    tag: "Monotributo familiar",
+  },
+  {
+    initials: "PR",
+    color: "#be185d",
+    name: "Paulo R.",
+    meta: "Profesional · Mendoza",
+    quote:
+      "Excelente asesoría profesional en todo momento. 100% recomendado para monotributistas y empresas en Mendoza.",
+    tag: "100% recomendado",
   },
 ];
 
@@ -38,7 +65,7 @@ function GoogleIcon() {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="h-5 w-5"
+      className="h-[18px] w-[18px]"
       aria-hidden="true"
     >
       <path
@@ -71,94 +98,104 @@ function Stars() {
 
 export default function Testimonials() {
   return (
-    <section id="opiniones">
-      <Container className="py-16 sm:py-20">
-        {/* Intro + rating */}
-        <div className="mx-auto max-w-3xl text-center">
-          <span className="section-label">Reseñas verificadas en Google</span>
-          <h2 className="mt-2 text-2xl font-extrabold text-azul sm:text-3xl">
-            Lo que dicen nuestros clientes
+    <section id="opiniones" className="overflow-hidden bg-light">
+      <Container className="py-12 sm:py-16">
+        <div className="mx-auto mb-7 max-w-3xl text-center">
+          <span className="section-label mb-2.5 text-[11px]">
+            Reseñas verificadas
+          </span>
+          <h2 className="mb-6 text-[clamp(20px,4vw,34px)] font-extrabold leading-tight text-azul">
+            Lo que dicen nuestros clientes en Mendoza
           </h2>
 
           <a
-            href={SITE.reviewsUrl}
+            href={SITE.mapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-flex items-center gap-2.5 rounded-full border border-border bg-white px-5 py-2.5 text-sm font-semibold text-azul shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-[18px] py-[7px] text-[13px] font-semibold text-azul shadow-[0_4px_24px_rgba(0,0,0,0.08)] transition hover:-translate-y-0.5"
           >
-            <Stars />
-            <span>
-              {SITE.rating} · {SITE.ratingCount} reseñas en Google
-            </span>
+            ⭐ {SITE.rating} en Google · {SITE.ratingCount} reseñas verificadas ·
+            Ver en Google Maps →
           </a>
         </div>
 
-        {/* Cards */}
-        <div className="mt-10 grid gap-4 lg:grid-cols-3">
+        <ReviewsCarousel>
           {testimonials.map((t) => (
-            <figure key={t.name} className="reveal-item card p-6">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
+            <figure
+              key={t.name}
+              className="card flex-[0_0_min(320px,85vw)] snap-start p-[22px] [scroll-snap-stop:always]"
+            >
+              <div className="mb-3 flex items-center justify-between">
+                <div className="flex items-center gap-2.5">
                   <span
-                    className="flex h-10 w-10 items-center justify-center rounded-full text-sm font-extrabold text-white"
+                    className="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-full text-[13px] font-extrabold text-white"
                     style={{ backgroundColor: t.color }}
                     aria-hidden="true"
                   >
                     {t.initials}
                   </span>
                   <div>
-                    <p className="text-sm font-bold text-azul">{t.name}</p>
+                    <p className="text-[13px] font-bold text-azul">{t.name}</p>
                     <p className="text-[11px] text-muted">{t.meta}</p>
                   </div>
                 </div>
-                <span title="Reseña verificada de Google">
+                <span title="Reseña de Google">
                   <GoogleIcon />
                 </span>
               </div>
 
-              <div className="mt-3 text-[15px]">
+              <div className="mb-2.5 text-sm">
                 <Stars />
               </div>
 
-              <blockquote className="mt-2.5 text-[15px] italic leading-relaxed text-muted">
+              <blockquote className="mb-3 text-sm italic leading-[1.7] text-muted">
                 “{t.quote}”
               </blockquote>
 
-              <figcaption className="mt-4">
-                <span className="inline-block rounded-full bg-[#eff6ff] px-3 py-1 text-[11px] font-bold text-celeste">
+              <figcaption>
+                <span className="inline-block rounded-full bg-[#eff6ff] px-2.5 py-0.5 text-[11px] font-bold text-celeste">
                   {t.tag}
                 </span>
               </figcaption>
             </figure>
           ))}
-        </div>
+        </ReviewsCarousel>
 
-        {/* CTA */}
-        <div className="mt-10 rounded-xl border border-border bg-white p-8 text-center shadow-[0_4px_24px_rgba(0,0,0,0.08)]">
-          <h3 className="text-xl font-extrabold text-azul sm:text-2xl">
-            ¿Querés la misma tranquilidad para tu actividad?
+        <div className="mt-6 rounded-xl border border-border bg-white p-7 text-center">
+          <h3 className="mb-2 text-lg font-bold text-azul">
+            ¿Querés que el Dr. Vallinas sea tu contador en Mendoza?
           </h3>
-          <p className="mt-2 text-[15px] text-muted">
-            Consultá por WhatsApp o agendá una reunión para analizar tu
-            situación sin compromiso.
+          <p className="mb-[18px] text-sm text-muted">
+            {SITE.ratingCount} clientes lo recomiendan en Google. Primera
+            consulta sin cargo.
           </p>
 
-          <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
+          <div className="flex flex-col items-center justify-center gap-2.5 sm:flex-row">
             <a
               href={SITE.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-green"
             >
-              🟢 Escribir por WhatsApp
+              💬 WhatsApp ahora
             </a>
-            <a href="#reservar" className="btn">
-              Agendar reunión
+            <a
+              href="#reservar"
+              className="btn btn-light"
+            >
+              📅 Agendar reunión
             </a>
           </div>
 
-          <p className="mt-4 text-xs text-muted">
-            20 minutos · Online o Presencial · Confidencial · Sin compromiso
+          <p className="mt-3.5 text-[13px] text-muted">
+            <a
+              href={SITE.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-celeste hover:underline"
+            >
+              🗺️ Ver todas las reseñas en Google Maps
+            </a>
           </p>
         </div>
       </Container>

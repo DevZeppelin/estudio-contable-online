@@ -2,11 +2,11 @@ import { buildJsonLd, buildFaqJsonLd, SITE } from "@/lib/seo";
 
 import Hero from "@/components/sections/Hero";
 import Process from "@/components/sections/Process";
-import Problems from "@/components/sections/Problems";
 import Services from "@/components/sections/Services";
+import Arca from "@/components/sections/Arca";
 import Differentials from "@/components/sections/Differentials";
-import Authority from "@/components/sections/Authority";
 import Testimonials from "@/components/sections/Testimonials";
+import Ubicacion from "@/components/sections/Ubicacion";
 import FAQ from "@/components/sections/FAQ";
 import Booking from "@/components/sections/Booking";
 import Locations from "@/components/sections/Locations";
@@ -33,11 +33,11 @@ export default function Page() {
       />
       <Hero />
       <Process />
-      <Problems />
       <Services />
+      <Arca />
       <Differentials />
-      <Authority />
       <Testimonials />
+      <Ubicacion />
       <FAQ />
       <Booking />
       <Locations />

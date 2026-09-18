@@ -123,6 +123,18 @@ h3 {
     box-shadow: none;
   }
 
+  /* Botón claro para fondos blancos/grises */
+  .btn-light {
+    background: #f8fafc;
+    color: rgb(var(--azul));
+    border: 2px solid #e2e8f0;
+    box-shadow: none;
+  }
+  .btn-light:hover {
+    background: #e2e8f0;
+    box-shadow: none;
+  }
+
   /* Tarjeta base clara */
   .card {
     background: #fff;

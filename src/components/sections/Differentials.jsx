@@ -3,75 +3,58 @@ import { SITE } from "@/lib/seo";
 
 const bullets = [
   {
-    title: "Hablás directo con el contador público",
-    desc: "Sin intermediarios, sin derivaciones. Tu caso lo maneja el Cr. Vallinas personalmente.",
+    title: "Atención directa — siempre el Dr. Vallinas",
+    desc: "Nunca te derivamos a un empleado. En cada consulta hablás con el contador titular.",
   },
   {
-    title: "No derivamos tu caso a terceros",
-    desc: "Atención 100% personalizada de principio a fin.",
+    title: "Matrícula vigente verificable",
+    desc: "Mat. 9156 en el Consejo Profesional de Ciencias Económicas de Mendoza (C.P.C.E.M.D.Z.).",
   },
   {
-    title: "Te decimos la verdad, aunque no sea lo que esperás",
-    desc: "Asesoramiento honesto. Sin promesas vacías ni demoras innecesarias.",
+    title: "Honorario claro desde el primer momento",
+    desc: "Sin sorpresas. El precio se acuerda antes de empezar, no aparece después en la factura.",
   },
   {
-    title: "Enfoque práctico: soluciones, no discursos",
-    desc: "Salís de cada reunión con pasos concretos a seguir.",
+    title: "Respuesta el mismo día",
+    desc: "WhatsApp directo con el contador. No hay que esperar turnos para preguntar algo urgente.",
   },
   {
-    title: "Especialistas en normativa nacional y provincial de Mendoza",
-    desc: "AFIP, ARCA, ATM Mendoza, Ingresos Brutos. Todo cubierto.",
-  },
-  {
-    title: "Matrícula 9156 — C.P.C.E.M.D.Z.",
-    desc: "Responsabilidad profesional y cumplimiento normativo garantizados.",
+    title: "Más de 20 años de experiencia",
+    desc: "Conocemos ARCA, ATM, DPJ y todos los organismos provinciales en detalle.",
   },
 ];
 
 const miniCards = [
-  {
-    t: "🏅 Contador matriculado",
-    d: "Respaldo profesional ante AFIP, ARCA y ATM Mendoza.",
-  },
-  {
-    t: "⚡ Respuesta rápida",
-    d: "Te avisamos antes de cada vencimiento importante.",
-  },
-  {
-    t: "📱 Online y Presencial",
-    d: "Atendemos donde más te convenga, sin complicaciones.",
-  },
-  {
-    t: "🎯 Foco en Mendoza",
-    d: "Especialización en ATM, IIBB provincial y Rentas Mendoza.",
-  },
+  { t: "+20 años", d: "de experiencia contable." },
+  { t: "Online 100%", d: "Sin ir a la oficina. WhatsApp o videollamada." },
+  { t: "Presencial", d: "Guaymallén, Mendoza. L–V 9–18 hs." },
 ];
 
 export default function Differentials() {
   return (
     <section id="diferencial">
-      <Container className="py-16 sm:py-20">
-        <div className="grid items-start gap-12 lg:grid-cols-2">
+      <Container className="py-12 sm:py-16">
+        <div className="grid items-start gap-7 md:grid-cols-2 md:gap-12">
           <div>
-            <span className="section-label">Por qué elegirnos</span>
-            <h2 className="mt-2 text-2xl font-extrabold text-azul sm:text-3xl">
-              ¿Por qué elegir nuestro estudio contable en Mendoza?
+            <span className="section-label text-[11px]">
+              ¿Por qué elegirnos?
+            </span>
+            <h2 className="mb-7 mt-2.5 text-[clamp(20px,4vw,34px)] font-extrabold leading-tight text-azul">
+              El contador en Mendoza que trabaja con vos, no para vos
             </h2>
 
-            <ul className="mt-8 space-y-5">
+            <ul className="flex flex-col gap-4">
               {bullets.map((b) => (
-                <li
-                  key={b.title}
-                  className="reveal-item flex items-start gap-3.5"
-                >
-                  <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#dcfce7] text-[13px] font-extrabold text-[#16a34a]">
+                <li key={b.title} className="reveal-item flex items-start gap-3">
+                  <span
+                    className="mt-0.5 flex h-[26px] w-[26px] shrink-0 items-center justify-center rounded-full bg-[#dcfce7] text-xs font-extrabold text-[#16a34a]"
+                    aria-hidden="true"
+                  >
                     ✓
                   </span>
                   <div>
-                    <p className="text-[15px] font-bold text-text">
-                      {b.title}
-                    </p>
-                    <p className="text-sm text-muted">{b.desc}</p>
+                    <strong className="mb-0.5 block text-sm">{b.title}</strong>
+                    <span className="text-[13px] text-muted">{b.desc}</span>
                   </div>
                 </li>
               ))}
@@ -79,37 +62,40 @@ export default function Differentials() {
           </div>
 
           <div>
-            <div className="grid gap-3.5 sm:grid-cols-2">
+            <div className="mb-[18px] grid gap-3 min-[641px]:grid-cols-2">
               {miniCards.map((c) => (
                 <div
                   key={c.t}
-                  className="reveal-item rounded-xl border border-border bg-light p-4.5 transition duration-200 hover:-translate-y-1 hover:shadow-[0_10px_28px_rgba(10,31,60,0.10)]"
+                  className="reveal-item rounded-xl border border-border bg-light p-4"
                 >
-                  <p className="text-sm font-bold text-azul">{c.t}</p>
-                  <p className="mt-1 text-[13px] text-muted">{c.d}</p>
+                  <h4 className="mb-1 text-[13px] font-bold text-azul">
+                    {c.t}
+                  </h4>
+                  <p className="text-xs text-muted">{c.d}</p>
                 </div>
               ))}
             </div>
 
-            {/* Rating — debe coincidir con la ficha de Google Business Profile */}
-            <div className="reveal-item mt-5 flex items-center gap-5 rounded-xl border border-border bg-light p-5">
-              <div>
-                <p className="text-4xl font-black leading-none text-azul">
-                  {SITE.rating}
-                </p>
-                <p className="mt-1 text-xl text-gold" aria-hidden="true">
-                  ★★★★★
-                </p>
-                <p className="text-xs text-muted">calificación en Google</p>
+            <div className="reveal-item flex items-center gap-3.5 rounded-xl border border-border bg-light p-[18px]">
+              <div className="text-4xl font-black leading-none text-azul">
+                {SITE.rating}
               </div>
-              <a
-                href={SITE.reviewsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-semibold text-celeste underline transition hover:opacity-75"
-              >
-                Ver todas las reseñas →
-              </a>
+              <div>
+                <div className="text-base text-gold" aria-hidden="true">
+                  ⭐⭐⭐⭐⭐
+                </div>
+                <a
+                  href={SITE.reviewsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[13px] font-bold hover:underline"
+                >
+                  {SITE.ratingCount} reseñas en Google
+                </a>
+                <small className="block text-[11px] text-muted">
+                  Todos los clientes recomiendan al Dr. Vallinas
+                </small>
+              </div>
             </div>
           </div>
         </div>

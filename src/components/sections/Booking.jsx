@@ -4,14 +4,17 @@ import { SITE } from "@/lib/seo";
 export default function Booking() {
   return (
     <section id="reservar" className="bg-azul text-white">
-      <Container className="py-16 sm:py-20">
+      <Container className="py-12 sm:py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="section-label !text-white/55">Reservar turno</span>
-          <h2 className="mt-2 text-2xl font-extrabold sm:text-3xl">
-            Agendá tu reunión orientativa sin cargo
+          <span className="section-label mb-2.5 text-[11px] text-[#93c5fd]">
+            Reunión sin cargo
+          </span>
+          <h2 className="mb-3 text-[clamp(20px,4vw,34px)] font-extrabold leading-tight">
+            Agendá tu reunión orientativa con el Contador Público en Mendoza
           </h2>
-          <p className="mt-3 text-white/70">
-            Elegí el día y horario que mejor te quede. Sin compromiso.
+          <p className="text-white/70">
+            Sin cargo ni compromiso. Analizamos tu situación y te damos una
+            respuesta clara.
           </p>
         </div>
 
@@ -19,10 +22,10 @@ export default function Booking() {
           <div className="reveal-item">
             <ul className="space-y-3 text-[15px] text-white/90">
               {[
-                "Diagnóstico simple de tu situación fiscal",
-                "Qué pasos seguir (y qué evitar)",
-                "Opciones para regularizar o poner todo en orden",
-                "Claridad para decidir sin miedo",
+                "Análisis de tu situación impositiva",
+                "Respuesta clara sobre qué necesitás",
+                "Propuesta de honorario sin sorpresas",
+                "Online o presencial en Guaymallén, Mendoza",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2.5">
                   <span
@@ -42,17 +45,17 @@ export default function Booking() {
               rel="noopener noreferrer"
               className="btn btn-green mt-7 w-full"
             >
-              💬 O escribinos por WhatsApp
+              💬 Reservar por WhatsApp
             </a>
 
-            <p className="mt-3 text-xs text-white/55">
-              🔒 Tu información se usa solo para coordinar la reunión.
+            <p className="mt-2.5 text-center text-[11px] text-white/50">
+              Tu información es confidencial y no será compartida.
             </p>
           </div>
 
           <div className="reveal-item overflow-hidden rounded-xl bg-white">
             <iframe
-              title="Reservar reunión con Contador Público en Mendoza — Cr. Darío Vallinas"
+              title="Agendar reunión con el Contador Público en Mendoza"
               src={SITE.calendlyUrl}
               className="h-[680px] w-full"
               frameBorder="0"

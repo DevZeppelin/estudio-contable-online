@@ -3,33 +3,34 @@ import { SITE } from "@/lib/seo";
 
 const nav = [
   { label: "Servicios", href: "#servicios" },
-  { label: "Por qué elegirnos", href: "#diferencial" },
-  { label: "Opiniones", href: "#opiniones" },
-  { label: "Preguntas", href: "#faq" },
+  { label: "ARCA", href: "#arca" },
+  { label: "Nosotros", href: "#diferencial" },
+  { label: "Reseñas", href: "#opiniones" },
+  { label: "Ubicación", href: "#ubicacion" },
 ];
 
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-azul shadow-[0_2px_12px_rgba(0,0,0,0.22)]">
-      <Container className="flex h-16 items-center justify-between gap-4">
+      <Container className="flex h-[60px] items-center justify-between gap-3">
         <a href="#contenido" className="shrink-0 leading-tight">
-          <p className="text-base font-bold text-white">
+          <p className="text-sm font-bold text-white sm:text-base">
             Estudio Contable en Mendoza
           </p>
-          <p className="hidden text-[11px] text-white/60 md:block">
-            Cr. Darío Vallinas · C.P.C.E.M.D.Z.
+          <p className="hidden text-[10px] text-white/60 md:block">
+            {SITE.brandPerson} · {SITE.matricula}
           </p>
         </a>
 
         <nav
-          className="hidden items-center gap-6 md:flex"
+          className="hidden items-center gap-[18px] md:flex"
           aria-label="Principal"
         >
           {nav.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-sm text-white/80 transition-colors hover:text-white"
+              className="text-[13px] text-white/80 transition-colors hover:text-white"
             >
               {item.label}
             </a>
@@ -40,9 +41,9 @@ export default function Header() {
           href={SITE.whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn btn-green px-4 py-2.5 text-sm"
+          className="btn btn-green px-3.5 py-2 text-[13px]"
         >
-          💬 Hablá con el Contador
+          💬 WhatsApp
         </a>
       </Container>
     </header>
